@@ -17,3 +17,7 @@ demo:
     echo -e "\033[35mcargo run --release --example transfer --all-features -- fetch \"$NODEADDR\"\033[0m"
 
     wait $PROVIDER_PID
+
+# Run the mesh demo
+mesh:
+    cd iroh-mesh && K8S_OPENAPI_ENABLED_VERSION=1.30 cargo run --bin iroh-proxy
